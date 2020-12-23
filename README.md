@@ -30,4 +30,4 @@ You can download [here](https://www.zophar.net/pdroms/chip8/chip-8-games-pack.ht
 
 ## Thanks
 
-Thank you very much to [Mehmet Okan Taştan](https://github.com/motastan), who was with me during the development process.
+Thank you very much to [Mehmet Okan Taştan](https://github.com/motastan95), who was with me during the development process.
