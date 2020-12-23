@@ -4,7 +4,7 @@
 
 ## Building
 
-## Requiretments
+### Requiretments
 
 In order for you to compile, the SDL library must be defined on your computer. You must use `mingw` compiler to building
 for windows
@@ -27,6 +27,25 @@ CGO_ENABLED=1 CC=gcc GOOS=linux GOARCH=amd64 go build -tags static -ldflags "-s 
 
 You can download [here](https://www.zophar.net/pdroms/chip8/chip-8-games-pack.html)
 
+
+## How To Run ?
+To start a game, define the rom path to the first argument of the compiled binary.
+
+***Example:***
+```shell script
+./bin/chip8.exe games/PONG
+```
+
+***PS:*** ROM files should be located under the directory where you run the binary file. Below is an example directory tree for the example above.
+
+```text
+.
+|-bin
+|---chip8.exe <-- Binary file
+|-chip8
+|-games
+|---PONG <-- ROM
+```
 
 ## Thanks
 
