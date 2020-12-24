@@ -10,6 +10,7 @@ type CHIP8 struct {
 	Renderer *Renderer
 	RAM      *RAM
 	KB       *Keyboard
+	Buzzer   *Buzzer
 
 	delayTimer uint8
 	soundTimer uint8
@@ -22,11 +23,13 @@ func NewCHIP8() *CHIP8 {
 		Renderer:   NewRenderer(),
 		RAM:        NewRAM(),
 		KB:         NewKeyboard(),
+		Buzzer:     NewBuzzer(),
 		delayTimer: 0x0,
 		soundTimer: 0x0,
 	}
 	chip.CPU.chip = chip
 	chip.Renderer.chip = chip
+	chip.Buzzer.chip = chip
 	return chip
 }
 

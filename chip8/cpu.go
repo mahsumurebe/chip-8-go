@@ -224,18 +224,13 @@ func (cpu *CPU) execute(opcode *uint16) {
 	}
 }
 
-func (cpu *CPU) beep() {
-
-}
-
 func (cpu *CPU) updateTimers() {
 	if cpu.chip.delayTimer > 0 {
 		cpu.chip.delayTimer -= 1
 	}
 	if cpu.chip.soundTimer > 0 {
-		cpu.chip.soundTimer -= 1
-
-		go cpu.beep()
+		cpu.chip.soundTimer = 0
+		go cpu.chip.Buzzer.beep()
 	}
 }
 func (cpu *CPU) cycle() {
